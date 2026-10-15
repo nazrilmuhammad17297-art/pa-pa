@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "XI TKJ — Kelas Digital",
+      "hasCanvas": false,
+      "bodyTextLen": 650,
+      "bodyTextHash": "102719d5eb8787f496956cb4131d1458ef009d30dcb8e9fa42225f5a873de0cd",
+      "bodyTextPrefix": "XI XI TKJ KELAS DIGITAL MENU UTAMA Beranda Tugas Absensi Jadwal ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "XI TKJ — Kelas Digital",
+      "hasCanvas": false,
+      "bodyTextLen": 566,
+      "bodyTextHash": "b242b574e623756c6fba8336c584c530fb77aeab83dfe9b6b5b506b2e4b045a9",
+      "bodyTextPrefix": "KELAS DIGITAL Beranda XI RUANG KELAS BERSAMA Halo, keluarga XI T",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#10172e">
+  <meta name="description" content="Aplikasi kelas XI TKJ untuk tugas, absensi, jadwal, piket, dan organisasi kelas.">
+  <title>XI TKJ — Kelas Digital</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" data-nav="beranda" aria-label="XI TKJ Beranda">
+        <span class="brand-mark">XI</span>
+        <span><strong>XI TKJ</strong><small>KELAS DIGITAL</small></span>
+      </a>
+      <div class="sidebar-label">MENU UTAMA</div>
+      <nav class="side-nav">
+        <button class="nav-item active" data-page="beranda"><span class="nav-icon">⌂</span>Beranda</button>
+        <button class="nav-item" data-page="tugas"><span class="nav-icon">▤</span>Tugas <span class="nav-count" id="taskBadge">0</span></button>
+        <button class="nav-item" data-page="absensi"><span class="nav-icon">✓</span>Absensi</button>
+        <button class="nav-item" data-page="jadwal"><span class="nav-icon">▦</span>Jadwal</button>
+        <button class="nav-item" data-page="organisasi"><span class="nav-icon">♧</span>Organisasi</button>
+        <button class="nav-item" data-page="admin"><span class="nav-icon">⚙</span>Panel Admin</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-card">
+          <div class="mini-card-icon">✦</div>
+          <strong>Semangat, XI TKJ!</strong>
+          <p>Disiplin hari ini, sukses nanti.</p>
+        </div>
+        <div class="creator"><span class="creator-dot"></span><span>Dibuat oleh <strong>Nazril</strong></span></div>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-brand" data-page="beranda"><span class="brand-mark">XI</span><span><strong>XI TKJ</strong><small>KELAS DIGITAL</small></span></button>
+        <div class="topbar-title"><span class="eyebrow" id="todayLabel">KELAS DIGITAL</span><h1 id="pageTitle">Beranda</h1></div>
+        <div class="top-actions">
+          <button class="icon-btn" id="notificationBtn" aria-label="Aktifkan notifikasi" title="Aktifkan notifikasi"><span>♧</span><i id="notificationDot"></i></button>
+          <button class="profile-chip" data-page="admin"><span class="avatar">N</span><span class="profile-text"><strong id="profileName">Tamu kelas</strong><small id="profileRole">XI TKJ</small></span><span class="chevron">⌄</span></button>
+        </div>
+      </header>
+
+      <section class="page active" id="page-beranda">
+        <div class="welcome-panel">
+          <div class="welcome-copy"><span class="welcome-kicker"><span class="live-dot"></span> RUANG KELAS DIGITAL</span><h2>Halo, keluarga <em>XI TKJ!</em></h2><p>Semua info kelas, tugas, dan jadwal ada di satu tempat.</p><div class="welcome-date" id="fullDate">Hari ini</div></div>
+          <div class="welcome-art" aria-hidden="true"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-grid"></div><div class="laptop"><div class="laptop-screen"><span>XI</span><small>TKJ</small><i></i></div><div class="laptop-base"></div></div><div class="float-tag tag-a">{ }</div><div class="float-tag tag-b">01</div></div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon purple">▤</span><span class="stat-caption">TUGAS AKTIF</span></div><div class="stat-value" id="activeTaskStat">0</div><div class="stat-bottom"><span class="status-dot purple-dot"></span><span>Belum ditandai selesai</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon green">✓</span><span class="stat-caption">CATATAN ABSENSI</span></div><div class="stat-value" id="attendanceStat">0</div><div class="stat-bottom"><span class="status-dot green-dot"></span><span>Rekap tersimpan di perangkat</span></div></article>
+          <article class="stat-card"><div class="stat-top"><span class="stat-icon orange">▦</span><span class="stat-caption">JADWAL HARI INI</span></div><div class="stat-value" id="todaySubjectStat">0</div><div class="stat-bottom"><span class="status-dot orange-dot"></span><span id="todayPiketSummary">Cek jadwal piket</span></div></article>
+        </div>
+
+        <div class="content-grid home-grid">
+          <section class="panel task-panel"><div class="panel-heading"><div><span class="section-kicker">JANGAN SAMPAI TERLEWAT</span><h3>Tugas terbaru</h3></div><button class="text-button" data-page="tugas">Lihat semua <span>→</span></button></div><div id="homeTaskList" class="home-task-list"></div></section>
+          <section class="panel today-panel"><div class="panel-heading"><div><span class="section-kicker">RINGKASAN HARI INI</span><h3>Jadwal pelajaran</h3></div><span class="day-pill" id="dayPill">Hari ini</span></div><div id="homeScheduleList" class="schedule-mini-list"></div><div class="panel-divider"></div><div class="piket-mini"><div class="piket-mini-icon">✧</div><div><span class="section-kicker">TIM PIKET HARI INI</span><strong id="homePiketNames">—</strong></div></div><button class="outline-button full-width" data-page="jadwal">Buka jadwal lengkap <span>→</span></button></section>
+        </div>
+        <footer class="app-footer">XI TKJ <span>•</span> Dibuat dengan semangat oleh <strong>Nazril</strong></footer>
+      </section>
+
+      <section class="page" id="page-tugas">
+        <div class="page-intro"><div><span class="section-kicker">PUSAT INFORMASI</span><h2>Daftar Tugas</h2><p>Pantau tugas kelas dan tenggat pengumpulannya.</p></div><div class="intro-icon purple-bg">▤</div></div>
+        <div class="filter-row"><div class="filter-tabs" id="taskFilters"><button class="filter-tab active" data-filter="semua">Semua</button><button class="filter-tab" data-filter="aktif">Belum selesai</button><button class="filter-tab" data-filter="selesai">Selesai</button></div><span class="muted-count" id="taskCountLabel">0 tugas</span></div>
+        <div id="taskPageList" class="task-page-list"></div>
+        <div class="empty-note" id="taskEmpty" hidden><div class="empty-illustration">✦</div><h3>Belum ada tugas</h3><p>Tugas yang ditambahkan admin akan muncul di halaman ini.</p></div>
+      </section>
+
+      <section class="page" id="page-absensi">
+        <div class="page-intro"><div><span class="section-kicker">KEDISIPLINAN KELAS</span><h2>Absensi Kelas</h2><p>Catatan kehadiran yang sudah direkap oleh admin.</p></div><div class="intro-icon green-bg">✓</div></div>
+        <div class="info-banner"><span class="info-symbol">i</span><p>Data absensi di versi ini tersimpan di perangkat/browser tempat aplikasi digunakan. Agar satu rekap bisa dilihat seluruh siswa dari HP masing-masing, aplikasi perlu dihubungkan ke server bersama.</p></div>
+        <div class="attendance-summary" id="attendanceSummary"></div>
+        <section class="panel"><div class="panel-heading"><div><span class="section-kicker">RIWAYAT KEHADIRAN</span><h3>Rekap absensi</h3></div><span class="day-pill" id="attendanceTodayPill">Hari ini</span></div><div id="attendanceList" class="attendance-list"></div><div class="empty-note compact" id="attendanceEmpty" hidden><div class="empty-illustration">✓</div><h3>Belum ada rekap</h3><p>Admin dapat menambahkan catatan kehadiran melalui Panel Admin.</p></div></section>
+      </section>
+
+      <section class="page" id="page-jadwal">
+        <div class="page-intro"><div><span class="section-kicker">ATUR WAKTU, JADI PRODUKTIF</span><h2>Jadwal Kelas</h2><p>Jadwal mata pelajaran dan tim piket XI TKJ.</p></div><div class="intro-icon orange-bg">▦</div></div>
+        <div class="schedule-switcher"><button class="schedule-switch active" data-schedule-tab="pelajaran">Mata Pelajaran</button><button class="schedule-switch" data-schedule-tab="piket">Jadwal Piket</button></div>
+        <div class="schedule-pane active" id="subjectPane"><div class="week-grid" id="subjectWeekGrid"></div></div>
+        <div class="schedule-pane" id="piketPane"><div class="week-grid piket-week-grid" id="piketWeekGrid"></div></div>
+        <div class="schedule-note"><span>✦</span><p>Pastikan datang tepat waktu dan jalankan tugas piket bersama-sama.</p></div>
+      </section>
+
+      <section class="page" id="page-organisasi">
+        <div class="page-intro"><div><span class="section-kicker">SATU KELAS, SATU TIM</span><h2>Organisasi Kelas</h2><p>Kenali pengurus dan penanggung jawab kelas XI TKJ.</p></div><div class="intro-icon blue-bg">♧</div></div>
+        <div class="homeroom-card"><div class="teacher-avatar">MR</div><div><span class="section-kicker">WALI KELAS</span><h3>Muh. Riza Palupy, S.H</h3><p>Pembimbing kelas XI TKJ</p></div><div class="teacher-stars">✦</div></div>
+        <div class="org-heading"><h3>Pengurus Kelas</h3><span>XI TKJ</span></div><div class="org-grid" id="organizationGrid"></div>
+      </section>
+
+      <section class="page" id="page-admin">
+        <div class="page-intro"><div><span class="section-kicker">PENGELOLAAN KELAS</span><h2>Panel Admin</h2><p>Kelola tugas dan catatan absensi kelas.</p></div><div class="intro-icon dark-bg">⚙</div></div>
+        <div id="adminLoginCard" class="login-layout"><div class="login-art"><div class="login-lock">⌑</div><h3>Area khusus admin</h3><p>Masuk untuk mengelola informasi kelas XI TKJ.</p><div class="login-decoration">XI <span>TKJ</span></div></div><form id="loginForm" class="login-form"><span class="section-kicker">SELAMAT DATANG KEMBALI</span><h3>Login Admin</h3><p class="form-subtitle">Masukkan akun admin untuk melanjutkan.</p><label for="adminUsername">Username</label><div class="input-wrap"><span>♙</span><input id="adminUsername" name="username" placeholder="Masukkan username" autocomplete="username" required></div><label for="adminPassword">Password</label><div class="input-wrap"><span>♧</span><input id="adminPassword" name="password" type="password" placeholder="Masukkan password" autocomplete="current-password" required><button class="password-toggle" type="button" id="togglePassword" aria-label="Tampilkan password">◉</button></div><p class="login-error" id="loginError" role="alert"></p><button class="primary-button full-width" type="submit">Masuk ke Admin <span>→</span></button><div class="login-footnote">Akses pengelolaan untuk pengurus yang ditunjuk.</div></form></div>
+        <div id="adminDashboard" hidden>
+          <div class="admin-welcome"><div class="avatar admin-avatar">N</div><div><span class="section-kicker">ADMIN AKTIF</span><h3>Halo, Nazril 👋</h3><p>Silakan kelola pembaruan untuk kelas.</p></div><button class="outline-button logout-button" id="logoutBtn">Keluar ↗</button></div>
+          <div class="admin-tools-grid">
+            <section class="panel admin-form-panel"><div class="panel-heading"><div><span class="section-kicker">BAGIKAN INFORMASI</span><h3>Tambah tugas</h3></div><span class="stat-icon purple">＋</span></div><form id="taskForm" class="stack-form"><label for="taskTitle">Nama tugas <b>*</b></label><input id="taskTitle" maxlength="100" placeholder="Contoh: Latihan konfigurasi VLAN" required><label for="taskSubject">Mata pelajaran</label><input id="taskSubject" maxlength="60" placeholder="Contoh: AIJ"><div class="form-two-col"><div><label for="taskDue">Batas pengumpulan</label><input id="taskDue" type="date"></div><div><label for="taskPriority">Prioritas</label><select id="taskPriority"><option value="normal">Normal</option><option value="tinggi">Penting</option></select></div></div><label for="taskDescription">Keterangan</label><textarea id="taskDescription" rows="3" maxlength="500" placeholder="Petunjuk atau detail tugas (opsional)"></textarea><button class="primary-button" type="submit">＋ Tambahkan tugas</button></form></section>
+            <section class="panel admin-form-panel"><div class="panel-heading"><div><span class="section-kicker">CATAT KEHADIRAN</span><h3>Tambah absensi</h3></div><span class="stat-icon green">✓</span></div><form id="attendanceForm" class="stack-form"><label for="attendanceName">Nama siswa <b>*</b></label><input id="attendanceName" maxlength="80" placeholder="Nama lengkap siswa" required><div class="form-two-col"><div><label for="attendanceDate">Tanggal <b>*</b></label><input id="attendanceDate" type="date" required></div><div><label for="attendanceStatus">Status <b>*</b></label><select id="attendanceStatus" required><option value="Hadir">Hadir</option><option value="Izin">Izin</option><option value="Sakit">Sakit</option><option value="Alpa">Alpa</option></select></div></div><label for="attendanceNote">Keterangan</label><input id="attendanceNote" maxlength="160" placeholder="Opsional"><button class="primary-button green-button" type="submit">＋ Simpan absensi</button></form><div class="admin-tip"><span>i</span><p>Tambahkan satu catatan untuk setiap siswa. Catatan dengan nama dan tanggal yang sama akan diperbarui.</p></div></section>
+          </div>
+          <section class="panel backup-panel"><div><span class="section-kicker">JAGA DATA TETAP AMAN</span><h3>Cadangkan data kelas</h3><p>Unduh salinan tugas dan absensi untuk disimpan atau dipindahkan.</p></div><div class="backup-actions"><button class="outline-button" id="exportBtn">↓ Ekspor JSON</button><label class="outline-button import-label" for="importFile">↑ Impor JSON</label><input id="importFile" type="file" accept="application/json,.json" hidden></div></section>
+          <section class="panel admin-manage-panel"><div class="panel-heading"><div><span class="section-kicker">KONTROL KONTEN</span><h3>Tugas yang dikelola</h3></div><span class="day-pill" id="adminTaskCount">0 tugas</span></div><div id="adminTaskList" class="admin-managed-list"></div></section>
+          <div class="security-warning"><span>!</span><p><strong>Catatan keamanan:</strong> login ini adalah gerbang sederhana di aplikasi front-end. Jangan gunakan password penting; untuk admin yang benar-benar aman dan data yang dibagikan antar-HP, diperlukan server/backend.</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <nav class="mobile-nav" aria-label="Navigasi mobile"><button class="mobile-nav-item active" data-page="beranda"><span>⌂</span><small>Home</small></button><button class="mobile-nav-item" data-page="tugas"><span>▤</span><small>Tugas</small><b id="mobileTaskBadge" hidden></b></button><button class="mobile-nav-item" data-page="absensi"><span>✓</span><small>Absensi</small></button><button class="mobile-nav-item" data-page="jadwal"><span>▦</span><small>Jadwal</small></button><button class="mobile-nav-item" data-page="organisasi"><span>♧</span><small>Kelas</small></button></nav>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span class="toast-icon">✓</span><span id="toastMessage">Berhasil</span></div>
+  <div class="modal-backdrop" id="confirmModal" hidden><div class="confirm-modal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle"><div class="confirm-icon">?</div><h3 id="confirmTitle">Hapus data?</h3><p id="confirmMessage">Tindakan ini tidak bisa dibatalkan.</p><div class="confirm-actions"><button class="outline-button" id="cancelConfirm">Batal</button><button class="danger-button" id="acceptConfirm">Hapus</button></div></div></div>
+  <script src="app.js"></script>
+</body>
+</html>

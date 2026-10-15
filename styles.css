@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0c1220;
+  --color-rail: #090e1a;
+  --color-surface: #151c2e;
+  --color-raised: #1c2540;
+  --color-fg: #e7edf8;
+  --color-muted: #8b98b3;
+  --color-line: #2a3552;
+  --color-primary: #3dcaa0;
+  --color-ink: #06281d;
+  --color-izin: #e2b15a;
+  --color-sakit: #8eb6f0;
+  --color-alpa: #e07a78;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+  ::selection {
+    background: color-mix(in srgb, var(--color-primary) 35%, transparent);
+  }
+}
+
+@layer components {
+  .field {
+    width: 100%;
+    border-radius: 0.85rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-rail);
+    padding: 0.8rem 0.9rem;
+    outline: none;
+  }
+  .field:focus {
+    border-color: var(--color-primary);
+  }
+  .status-hadir {
+    background: color-mix(in srgb, var(--color-primary) 18%, transparent);
+    color: var(--color-primary);
+  }
+  .status-izin {
+    background: color-mix(in srgb, var(--color-izin) 18%, transparent);
+    color: var(--color-izin);
+  }
+  .status-sakit {
+    background: color-mix(in srgb, var(--color-sakit) 18%, transparent);
+    color: var(--color-sakit);
+  }
+  .status-alpa {
+    background: color-mix(in srgb, var(--color-alpa) 18%, transparent);
+    color: var(--color-alpa);
+  }
+  .status-empty {
+    background: var(--color-raised);
+    color: var(--color-muted);
+  }
+  .seg-on-hadir {
+    background: var(--color-primary);
+    color: var(--color-ink);
+  }
+  .seg-on-izin {
+    background: var(--color-izin);
+    color: #2a210c;
+  }
+  .seg-on-sakit {
+    background: var(--color-sakit);
+    color: #0d1b30;
+  }
+  .seg-on-alpa {
+    background: var(--color-alpa);
+    color: #2a1010;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

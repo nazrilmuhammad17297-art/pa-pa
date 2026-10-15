@@ -1,0 +1,98 @@
+[
+  {
+    "name": "app.js",
+    "path": "app.js",
+    "sha": "0a393cec69196d4ca042c545d9decd4f903b0a0d",
+    "size": 22990,
+    "url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/app.js?ref=main",
+    "html_url": "https://github.com/nazrilmuhammad17297-art/1/blob/main/app.js",
+    "git_url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/0a393cec69196d4ca042c545d9decd4f903b0a0d",
+    "download_url": "https://raw.githubusercontent.com/nazrilmuhammad17297-art/1/main/app.js",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/app.js?ref=main",
+      "git": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/0a393cec69196d4ca042c545d9decd4f903b0a0d",
+      "html": "https://github.com/nazrilmuhammad17297-art/1/blob/main/app.js"
+    }
+  },
+  {
+    "name": "icon.svg",
+    "path": "icon.svg",
+    "sha": "172892144033a298396aacf25174498fcbbb53ca",
+    "size": 745,
+    "url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/icon.svg?ref=main",
+    "html_url": "https://github.com/nazrilmuhammad17297-art/1/blob/main/icon.svg",
+    "git_url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/172892144033a298396aacf25174498fcbbb53ca",
+    "download_url": "https://raw.githubusercontent.com/nazrilmuhammad17297-art/1/main/icon.svg",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/icon.svg?ref=main",
+      "git": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/172892144033a298396aacf25174498fcbbb53ca",
+      "html": "https://github.com/nazrilmuhammad17297-art/1/blob/main/icon.svg"
+    }
+  },
+  {
+    "name": "index.html",
+    "path": "index.html",
+    "sha": "fe8d9cbb601ecf13eddd297d71a5d428ac76141f",
+    "size": 15662,
+    "url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/index.html?ref=main",
+    "html_url": "https://github.com/nazrilmuhammad17297-art/1/blob/main/index.html",
+    "git_url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/fe8d9cbb601ecf13eddd297d71a5d428ac76141f",
+    "download_url": "https://raw.githubusercontent.com/nazrilmuhammad17297-art/1/main/index.html",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/index.html?ref=main",
+      "git": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/fe8d9cbb601ecf13eddd297d71a5d428ac76141f",
+      "html": "https://github.com/nazrilmuhammad17297-art/1/blob/main/index.html"
+    }
+  },
+  {
+    "name": "manifest.json",
+    "path": "manifest.json",
+    "sha": "3c61c27500af5b96168ae77053e4f1829bd99bc1",
+    "size": 438,
+    "url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/manifest.json?ref=main",
+    "html_url": "https://github.com/nazrilmuhammad17297-art/1/blob/main/manifest.json",
+    "git_url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/3c61c27500af5b96168ae77053e4f1829bd99bc1",
+    "download_url": "https://raw.githubusercontent.com/nazrilmuhammad17297-art/1/main/manifest.json",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/manifest.json?ref=main",
+      "git": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/3c61c27500af5b96168ae77053e4f1829bd99bc1",
+      "html": "https://github.com/nazrilmuhammad17297-art/1/blob/main/manifest.json"
+    }
+  },
+  {
+    "name": "style.css",
+    "path": "style.css",
+    "sha": "d59ce314ff7f268ba7bd16e6f802eeae49cedb92",
+    "size": 32928,
+    "url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/style.css?ref=main",
+    "html_url": "https://github.com/nazrilmuhammad17297-art/1/blob/main/style.css",
+    "git_url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/d59ce314ff7f268ba7bd16e6f802eeae49cedb92",
+    "download_url": "https://raw.githubusercontent.com/nazrilmuhammad17297-art/1/main/style.css",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/style.css?ref=main",
+      "git": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/d59ce314ff7f268ba7bd16e6f802eeae49cedb92",
+      "html": "https://github.com/nazrilmuhammad17297-art/1/blob/main/style.css"
+    }
+  },
+  {
+    "name": "sw.js",
+    "path": "sw.js",
+    "sha": "78fb3fb786537f8e43ba193380792e7a0dbf6459",
+    "size": 1463,
+    "url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/sw.js?ref=main",
+    "html_url": "https://github.com/nazrilmuhammad17297-art/1/blob/main/sw.js",
+    "git_url": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/78fb3fb786537f8e43ba193380792e7a0dbf6459",
+    "download_url": "https://raw.githubusercontent.com/nazrilmuhammad17297-art/1/main/sw.js",
+    "type": "file",
+    "_links": {
+      "self": "https://api.github.com/repos/nazrilmuhammad17297-art/1/contents/sw.js?ref=main",
+      "git": "https://api.github.com/repos/nazrilmuhammad17297-art/1/git/blobs/78fb3fb786537f8e43ba193380792e7a0dbf6459",
+      "html": "https://github.com/nazrilmuhammad17297-art/1/blob/main/sw.js"
+    }
+  }
+]
